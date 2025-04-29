@@ -1,0 +1,40 @@
+.topbarContainer{
+    width: 100%;
+    height: 100%;
+}
+.topbarContainer .container{
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+
+.topbarContainer .container .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.topbarContainer .container .right .btn{
+    width: 5.25rem;
+    height: 2.37rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 0.5rem;
+    font-family: 'Barlow' 'sans-serif';
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 140%;
+    vertical-align: middle;
+    color: var(--white);
+
+}
+.topbarContainer .container .right .loginBtn{
+   background-color: transparent;
+   color:var(--blue-dark);
+}

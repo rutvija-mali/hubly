@@ -1,0 +1,211 @@
+.mainContainer {
+    width: 23.5rem;
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+  }
+  
+  
+  .Header {
+    background: var(--Brand-color);
+    height: 13%;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem;
+    box-sizing: border-box;
+  }
+  
+  .HeaderProfile img {
+    border: 0.13rem solid var(--white);
+    border-radius: 50%;
+  }
+  
+  .HeaderProfile .active {
+    background-color: #00BDA5;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 0.13rem solid #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.94rem;
+    left: 0.63rem;
+    transform: translate(10%, 30%);
+  }
+  
+  .Header h4 {
+    font-family: Helvetica;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.63rem;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #FFFFFF;
+  }
+
+  .Body {
+    background: #EEEEEE;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 0.69rem;
+    line-height: 0.81rem;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    height: 87%;
+    box-sizing: border-box;
+   
+  }
+  
+  .mainSection {
+    display: flex;
+    flex-direction: column;
+    height: 87%;
+    overflow-y: auto;
+  }
+  .SupportMsg {
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+
+  }
+  
+  .message {
+    max-width: 14.44rem;
+    padding: 0.88rem 0.31rem;
+    background-color: var(--white);
+    border-radius: 0.56rem;
+    text-align: start;
+    text-indent: 0.5rem;
+    margin-top: 0;
+  }
+  
+
+  .msgSection {
+    width: 100%;
+    border-top: 0.13rem solid #F2F5F8;
+    background-color: var(--white);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    height:13%;
+    position: relative;
+  }
+   
+
+  .msgSection textarea {
+    width: 100%;
+    font-family: Helvetica;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.38rem;
+    letter-spacing: 0%;
+    color: #8498B6;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+  }
+
+  .msgSection button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.5rem;
+  }
+  
+  .msgSection .icon {
+    padding: 0.5rem 1rem;
+  }
+  
+  .customerMsg{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+  }
+  .customerMsg .message{
+    margin-bottom: 0;
+    
+  }
+
+  .mainSection {
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+  
+  .mainSection::-webkit-scrollbar {
+    display: none;
+  }
+
+  .customInputContainer{
+    box-sizing: border-box;
+    width: 280px;
+    height: 216px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 16px;
+    border: 0.7px solid #D1D6DA;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+  }
+  .thankYouBtn {
+    width: 203px;
+    height: 30.86px;
+    background-color: var(--accent);
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 11.22px;
+    line-height: 16.83px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: var(--white);
+    border: none;
+    box-sizing: border-box;
+    border-radius: 13px;
+    margin:0.5rem auto;
+  }
+  
+  .form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  
+  }
+  .groupInputs{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.7px solid #C3C3C3;
+    gap: 3px;
+   
+  }
+  .groupInputs label {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 9.12px;
+    line-height: 9.12px;
+    letter-spacing: 0%;
+    vertical-align: middle;    
+    color: #505050;
+  }
+  
+  .groupInputs input{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 11.22px;
+    line-height: 9.12px;
+    letter-spacing: 0%;
+    vertical-align: middle;    
+    color: var(--black);
+    border: none;
+  }

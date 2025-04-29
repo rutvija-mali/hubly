@@ -1,0 +1,302 @@
+.heroSection{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+}
+.leftHeroSection{
+    font-family: 'Barlow' 'sans-serif';
+    width: 666px;
+    height: 261px;
+
+
+}
+.leftHeroSection h1{
+    font-family: 'Barlow' 'sans-serif';
+    font-weight: 700;
+    font-size: 3.37rem;
+    line-height: 110.00000000000001%;
+    letter-spacing: -2%;
+    color: #30404D;
+    margin-bottom: 0;
+
+}
+.leftHeroSection  p{
+    font-family: 'Barlow' 'sans-serif';
+    font-weight: 400;
+    width: 90%;
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    color: #30404D;
+    margin-top: 0;
+}  
+
+.heroSectionBtns{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.HeroBtns{
+  height: 10.3rem;
+  height: 3rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.startBtn{
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--accent);
+    color: var(--white);
+    
+}
+
+.videoBtn{
+    font-weight: 600;
+    font-size: 1.37rem;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #30404D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: transparent;
+}
+
+.mediaSection{
+    height: 20%;
+    background-color: #EBF1F9;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 7.5rem;
+}
+
+.middleSection{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.topSection, .headingSection{
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'Barlow' 'sans-serif';
+    color: #30404D;
+
+}
+
+.topSection h2, .planSection h2{
+    font-weight: 700;
+    font-size: 2.75rem;
+    line-height: 120%;
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.topSection p, .planSection p{
+    font-weight: 400;
+    font-size: 1.12rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    text-align: center;
+
+}
+
+.bottomSection{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    border: 2px solid #6FA4D729;
+    border-radius: 1.5rem;
+    background-color: var(--white);
+}
+
+.leftSection ul{
+    list-style: none;
+    font-family: 'Barlow' 'sans-serif';
+}
+
+.leftSection h3{
+    font-family: 'Barlow' 'sans-serif';
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 140%;
+    letter-spacing: -1%;
+    color: #30404D;
+    margin-bottom: 0;
+}
+
+.leftSection p{
+    font-family: 'Barlow' 'sans-serif';
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: 0px;
+    color: #394B59;
+
+}
+
+.planSection{
+    width: 82%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    
+}
+
+.pricingSection{
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+   
+}
+
+.chatbot{
+  position: fixed;
+  top: 90%;
+  right: 1rem;
+  cursor: pointer;
+}
+.chatbotMsg{
+    position: fixed;
+    top: 67%;
+    right: 2rem;
+}
+
+.chatbox{
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .heroSection {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    .imgContainer img{
+        width: 90%;
+    }
+  
+    .leftHeroSection {
+      width: 100%;
+      height: auto;
+    }
+  
+    .leftHeroSection h1 {
+      font-size: 2.5rem;
+    }
+  
+    .leftHeroSection p {
+      font-size: 0.95rem;
+      width: 100%;
+    }
+  
+    .heroSectionBtns {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .mediaSection {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+      gap: 1rem;
+  
+    }
+    .mediaSection img{
+        width: 80px;
+    
+    }
+
+    .middleSection{
+        gap: 2rem;
+    }
+  
+    .bottomSection {
+      flex-direction: column;
+      padding: 1rem;
+      gap: 2rem;
+    }
+  
+    .topSection, .headingSection {
+      width: 90%;
+    }
+    .heroSectionBtns{
+        margin-top: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .leftHeroSection h1 {
+      font-size: 2rem;
+    }
+  
+    .videoBtn {
+      font-size: 1rem;
+    }
+  
+    .startBtn {
+      font-size: 1rem;
+    }
+  
+    .planSection  {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .bottomSection img {
+      width: 100%;
+    }
+
+    .pricingSection{
+      overflow-x: scroll;
+      scroll-snap-type: mandatory;
+    }
+
+  }
+  
+  @media screen and (max-width: 480px) {
+    .heroSection {
+      padding: 1rem;
+    }
+    
+    .HeroBtns {
+      padding: 0.5rem 1rem;
+    }
+  
+    .mediaSection {
+       display: flex;
+       width: 90%;
+       overflow-x: auto;
+        white-space: nowrap;
+    }
+  
+    .topSection h2, .planSection h2 {
+      font-size: 1.75rem;
+    }
+  
+    .topSection p, .planSection p {
+      font-size: 1rem;
+    }
+
+  }
+  

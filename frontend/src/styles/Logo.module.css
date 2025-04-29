@@ -1,0 +1,15 @@
+.logoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+}
+
+.logoContainer span{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 140%;
+    color:var(--accent);
+
+}

@@ -1,0 +1,51 @@
+.chatbox {
+    position: relative;
+    background: white;
+    border-radius: 0.5rem;
+    width: 240px;
+    min-height: 116px;
+    height: auto;
+    padding: 24px 16px 16px 16px;
+    box-shadow: 0px 4px 20px 0px #425B7626;
+    box-sizing: border-box;
+    margin-top: 2rem;
+
+  }
+  
+  .avatar {
+    position: absolute;
+    top: -25px;
+    left: 40%;
+    width: 48px;
+    height: 48px;
+    background-image: url('../assets/Avatar.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+  
+  .closeBtn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .message {
+    font-family: Helvetica;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #425B76;
+    
+  }
+  
+  .message span {
+    font-size: 1.2rem;
+  }
+  

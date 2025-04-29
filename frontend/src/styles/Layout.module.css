@@ -1,0 +1,23 @@
+.layoutContainer{
+    display: flex;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+
+}
+.sideContainer{
+    width: 5.87rem;
+    height: auto;
+    background-color: #FAFBFC;
+    border-right: 0.6px solid #D1D6DA;
+}
+.outletContainer{
+    width: calc(100% - 5.87rem);
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}

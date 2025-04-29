@@ -1,0 +1,11 @@
+2025-04-27T17:08:46.978Z-TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at file:///C:/Users/rutvi/OneDrive/Desktop/cuvette-react/hubly/backend/routes/Ticket.js:100:47
+    at Layer.handleRequest (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\lib\route.js:157:13)
+    at auth (file:///C:/Users/rutvi/OneDrive/Desktop/cuvette-react/hubly/backend/middlewares/authentication.js:19:5)
+    at Layer.handleRequest (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\index.js:295:15

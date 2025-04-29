@@ -1,0 +1,308 @@
+.contactMainContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.contactContainer {
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.contactInfo {
+    width: 20%;
+    background-color: #FAFBFC;
+    border-right: 0.04rem solid #D1D6DA;
+    box-sizing: border-box;
+}
+
+.contactInfo h3 {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1.13rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.0025em;
+    color: #636060;
+    margin-left: 1rem;
+}
+
+.contactHeader {
+    width: 100%;
+    height: 1.88rem;
+    border-bottom: 0.06rem solid #D7D8D8;
+    box-sizing: border-box;
+    margin-top: 3rem;
+}
+
+.contactHeader .chatBtn {
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-bottom: 0.13rem solid #B9BABA;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 0.88rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #888888;
+}
+
+.contactBody {
+    margin-top: 0.5rem;
+}
+
+.userContact {
+    width: 100%;
+    height: 2.88rem;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+}
+
+.contact {
+    width: 98%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 1.69rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-left: 0.31rem;
+}
+
+.activeChat {
+    background-color: #EFEFEF;
+    width: 98%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 1.69rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-left: 0.31rem;
+}
+
+.activeUserChat {
+    border-left: 0.19rem solid var(--accent);
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.chatInfo {
+    height: 100%;
+}
+
+.chatInfo h5 {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 0.84rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #5E9BD5;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.chatInfo p {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 0.69rem;
+    line-height: 0.81rem;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #9A9B9D;
+    margin-top: 0;
+    padding-top: 0.19rem;
+}
+
+.chatBox {
+  width: 45%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.chatboxTopSection {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 0.06rem solid #E4E4E4;
+  box-sizing: border-box;
+}
+
+.chatboxTopSection h3 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 0.94rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #86898C;
+}
+
+.dateDivider {
+  display: flex;
+  align-items: center;
+  gap: 0.19rem;
+  margin: 1rem 0;
+}
+
+.dateDivider .line {
+  flex-grow: 1;
+  height: 0.06rem;
+  background-color: #E4E4E4;
+}
+
+.dateText {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 0.83rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #8C8E92;
+}
+
+.chatSection {
+  width: 95%;
+  height: auto;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.warning {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 0.88rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #FF0000;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.chatCustomer,
+.chatUser {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.chatCustomerText h5,
+.chatUserText h5 {
+  margin-top: 0%;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 0.84rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #5E9BD5;
+  margin-bottom: 0;
+}
+
+.chatCustomerText p,
+.chatUserText p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 0.86rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #9A9B9D;
+}
+
+.chatUser {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+}
+
+.chatCustomerText,
+.chatCustomerText {
+  width: 50%;
+}
+
+.chatUserText {
+  text-align: end;
+}
+
+.chatInput {
+  margin-top: 1rem;
+}
+
+.chatInput textarea {
+  width: 100%;
+  height: 6.63rem;
+  border: 0.06rem solid #D1D6DA;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  box-sizing: border-box;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  position: relative;
+}
+
+.sendBtn {
+  position: absolute;
+  bottom: 0.44rem;
+  right: 0.44rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.diableBtn {
+  border: 0.13rem solid #D1D6DA;
+}
+
+.ableBtn {
+  border: 0.13rem solid var(--accent);
+}
+
+.teamInfo {
+  width: 35%;
+  background-color: #FAFBFC;
+  border-left: 0.06rem solid #D1D6DA;
+}
+
+.teamDetails h5{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #184E7F;
+    margin-left: 0.5rem;
+    box-sizing: border-box;
+
+
+}
+
+.message{
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #00000073;
+  margin-top: 2rem;
+}

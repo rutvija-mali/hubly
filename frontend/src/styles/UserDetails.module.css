@@ -1,0 +1,66 @@
+.userDetailsTopSection {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0rem;
+    margin-top: 0;
+    margin-left: 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  .userDetailsTopSection h5 {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 0.82rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #939598;
+  }
+  
+  .userDetails h5 {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 0.88rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #184E7F;
+    margin-left: 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  .userInfo {
+    margin-left: 0.5rem;
+    box-sizing: border-box;
+    margin-right: 0.5rem;
+  }
+  
+  .userInfoItem {
+    width: 100%;
+    height: 2.38rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1rem;
+    border: 1px solid #D1D6DA;
+    margin-top: 0.25rem;
+    box-sizing: border-box;
+    border-radius: 0.81rem;
+  }
+  
+  .userInfoIcon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .userInfoItem p {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #808080;
+  }
+  

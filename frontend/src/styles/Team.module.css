@@ -1,0 +1,115 @@
+.teamMainContainer {
+    width: 100% !important;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.teamContainer {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.teamMainContainer h3 {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1.13rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.0025em;
+    color: #636060;
+}
+.tableContainer{
+    width: 100%;
+    overflow-x: auto;
+    margin:0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin:0 auto;
+}
+
+thead tr th {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: #184E7F;
+
+}
+
+thead tr{
+    border-top: 1px solid #6A6A6A;
+    border-bottom: 1px solid #6A6A6A;
+  
+
+}
+thead tr th{
+    padding: 0.5rem;
+    width: 16.66%;
+    text-align: start;
+}
+
+tbody td {
+  padding: 0.7rem ;
+  border-bottom: 1px solid #E2E8F0;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #020617;
+
+}
+ .action{ 
+    text-align: end;
+    vertical-align: middle;
+    color: #545454;
+} 
+.action .icon{
+    margin-left: 1rem;
+    cursor: pointer;
+   
+}
+.deleteIcon{
+    position: relative;
+}
+.model{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.addTeamBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    border-radius: 9px;
+    padding: 2px 4px;
+    height: 40px;
+    width: 197px;
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    cursor: pointer;
+
+}
+
+.btnContainer{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+}

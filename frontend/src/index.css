@@ -1,0 +1,21 @@
+:root {
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --accent: #184E7F;
+  --white:#FFFFFF;
+  --blue-drak:#36364A;
+  --Brand-color:#33475B;
+
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+

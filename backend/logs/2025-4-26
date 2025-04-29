@@ -1,0 +1,11 @@
+2025-04-26T17:20:03.870Z-MongoServerError: Failed to optimize pipeline :: caused by :: First argument to $slice must be an array, but is of type: string
+    at Connection.sendCommand (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\cmap\connection.js:299:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Connection.command (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\cmap\connection.js:327:26)
+    at async Server.command (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\sdam\server.js:168:29)
+    at async AggregateOperation.executeCommand (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\operations\command.js:76:16)
+    at async AggregateOperation.execute (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\operations\aggregate.js:87:16)
+    at async tryOperation (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\operations\execute_operation.js:207:20)
+    at async executeOperation (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async AggregationCursor._initialize (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\cursor\aggregation_cursor.js:56:26)
+    at async AggregationCursor.cursorInit (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\cursor\abstract_cursor.js:633:27)

@@ -1,0 +1,7 @@
+2025-04-28T17:04:04.545Z-TypeError: Cannot read properties of undefined (reading 'senderType')
+    at file:///C:/Users/rutvi/OneDrive/Desktop/cuvette-react/hubly/backend/routes/Ticket.js:174:106
+    at Array.forEach (<anonymous>)
+    at file:///C:/Users/rutvi/OneDrive/Desktop/cuvette-react/hubly/backend/routes/Ticket.js:166:19
+    at Array.forEach (<anonymous>)
+    at file:///C:/Users/rutvi/OneDrive/Desktop/cuvette-react/hubly/backend/routes/Ticket.js:157:26
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

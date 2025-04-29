@@ -1,0 +1,11 @@
+2025-04-24T16:19:53.721Z-BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+    at new ObjectId (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\bson\lib\bson.cjs:2523:23)
+    at file:///C:/Users/rutvi/OneDrive/Desktop/cuvette-react/hubly/backend/routes/User.js:145:57
+    at Layer.handleRequest (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\lib\route.js:157:13)
+    at auth (file:///C:/Users/rutvi/OneDrive/Desktop/cuvette-react/hubly/backend/middlewares/authentication.js:19:5)
+    at Layer.handleRequest (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\router\lib\layer.js:152:17)

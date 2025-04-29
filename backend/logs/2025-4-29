@@ -1,0 +1,7 @@
+2025-04-29T10:41:53.237Z-TypeError: dateString.split is not a function
+    at splitDateString (file:///C:/Users/rutvi/OneDrive/Desktop/cuvette-react/hubly/backend/node_modules/date-fns/parseISO.js:105:28)
+    at parseISO (file:///C:/Users/rutvi/OneDrive/Desktop/cuvette-react/hubly/backend/node_modules/date-fns/parseISO.js:49:23)
+    at file:///C:/Users/rutvi/OneDrive/Desktop/cuvette-react/hubly/backend/routes/Chat.js:127:28
+    at Array.forEach (<anonymous>)
+    at file:///C:/Users/rutvi/OneDrive/Desktop/cuvette-react/hubly/backend/routes/Chat.js:125:21
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

@@ -1,0 +1,6 @@
+2025-04-25T17:08:42.898Z-MongoServerError: E11000 duplicate key error collection: hubly.users index: username_1 dup key: { username: null }
+    at InsertOneOperation.execute (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryOperation (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\operations\execute_operation.js:207:20)
+    at async executeOperation (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async Collection.insertOne (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\collection.js:157:16)

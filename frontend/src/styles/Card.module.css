@@ -1,0 +1,127 @@
+.cardContainer {
+    max-width: 36.75rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1.5rem;
+    border: 0.13rem solid #2F5F8B1A;
+    box-shadow: 0rem 0.25rem 2.13rem 0rem #00000008;
+    padding: 2.25rem;
+    font-family: 'Barlow', 'sans-serif';
+    position: relative;
+    margin: 1rem auto;
+    background-color: white;
+}
+
+.cardHeading h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 140%;
+    color: #30404D;
+    margin-bottom: 0;
+    text-align: start;
+}
+
+.cardHeading p {
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 140%;
+    color: #30404DB2;
+    margin-top: 0.25rem;
+    text-align: start;
+}
+
+.moneySection {
+    font-weight: 700;
+    font-size: 3.38rem;
+    color: #3A7ABD;
+}
+
+.money {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #98A8B3;
+}
+
+.middleSection p {
+    font-weight: 700;
+    font-size: 1.13rem;
+    color: #30404D;
+    text-align: start;
+    margin-top: 1rem;
+}
+
+.checkListIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: #E1EEFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.middleSection div {
+    text-align: start;
+}
+
+.feature {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature span {
+    font-weight: 500;
+    font-size: 1.13rem;
+    color: #30404D;
+}
+
+.starterBtn {
+    width: 100%;
+    max-width: 32.25rem;
+    height: 4.5rem;
+    border-radius: 4rem;
+    padding: 1rem 1.5rem;
+    font-family: Barlow;
+    font-weight: 600;
+    font-size: 1.13rem;
+    text-align: center;
+    color: var(--accent);
+    background-color: var(--white);
+    border: 1px solid #24477966;
+    margin-top: 2rem;
+    align-self: center;
+    position: static; 
+}
+
+
+@media (max-width: 768px) {
+
+    .cardContainer {
+        min-width: 90%;
+        padding: 1.5rem;
+    }
+
+    .cardHeading h2 {
+        font-size: 1.75rem;
+    }
+
+    .cardHeading p,
+    .money,
+    .middleSection p,
+    .feature span {
+        font-size: 1rem;
+    }
+
+    .moneySection {
+        font-size: 2.5rem;
+    }
+
+    .starterBtn {
+        font-size: 1rem;
+        height: 3.75rem;
+    }
+}
