@@ -24,7 +24,7 @@ const ChatBox = () => {
   const {config} = useConfig()
   let widgetConfig = ''
   if(config){
-    widgetConfig = config[0]
+    widgetConfig = config
   }
 
   let customerId = localStorage.getItem('customerId')

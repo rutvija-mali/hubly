@@ -93,7 +93,7 @@ WidgetConfigRouter.put('/:id',auth,async(req,res)=>{
 WidgetConfigRouter.get('/widget',async(req,res)=>{
     try {
         
-        const wingetConfig = await WidgetConfig.find()
+        const wingetConfig = await WidgetConfig.findOne()
    
         return res.status(200).json(wingetConfig)
     } catch (error) {
