@@ -165,7 +165,7 @@ const ChatBox = () => {
   return (
     <div className={styles.mainContainer}>
       {/* Header */}
-      <div className={styles.Header} style={{backgroundColor:widgetConfig?.headerColor}}>
+      <div className={styles.Header} style={{backgroundColor:widgetConfig?.headerColor }}>
         <div className={styles.HeaderProfile}>
           <div className={styles.img}>
             <img src={avatar} alt="avatar" />
@@ -177,7 +177,7 @@ const ChatBox = () => {
       </div>
 
       {/* Body */}
-      <div className={styles.Body} style={{backgroundColor:widgetConfig.backgroundColor}}>
+      <div className={styles.Body} style={{backgroundColor:widgetConfig?.backgroundColor }}>
         {/* Messages Section */}
         <div className={styles.mainSection}>
             { customerId === null &&
