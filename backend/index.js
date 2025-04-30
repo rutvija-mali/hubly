@@ -17,7 +17,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cookieParser())
-const allowedOrigins = ['http://localhost:5173','https://hubly-mxct.vercel.app','https://your-frontend.vercel.app'];
+const allowedOrigins = ['http://localhost:5173','https://hubly-mxct-git-master-rutvija-malis-projects.vercel.app'];
 
 app.use(cors({
   origin: (origin, callback) => {
