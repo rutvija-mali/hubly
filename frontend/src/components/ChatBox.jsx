@@ -29,6 +29,8 @@ const ChatBox = () => {
 
   let customerId = localStorage.getItem('customerId')
   const sessionId = localStorage.getItem('sessionId')
+
+  
   useEffect(() => {
     if (messageEndRef.current) {
       messageEndRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -184,8 +186,8 @@ const ChatBox = () => {
                     <img src={avatar} alt="avatar" />
                 </div>
                 <div className={styles.msg}>
-                    <p className={styles.message}>{widgetConfig?.customMessage1}</p>
-                    <p className={styles.message}>{widgetConfig?.customMessage2}</p>
+                    <p className={styles.message}>{widgetConfig?.customMessage1||'How can i help you?'}</p>
+                    <p className={styles.message}>{widgetConfig?.customMessage2 || 'Ask me anything!'}</p>
                 </div>
               </div> 
 
@@ -218,7 +220,7 @@ const ChatBox = () => {
                             <label htmlFor="name">Your name</label>
                             <input type="text" name='name' 
                             value={name} onChange={(e)=>setName(e.target.value)}
-                            placeholder={widgetConfig?.namePlaceholder}
+                            placeholder={widgetConfig?.namePlaceholder ||'Your name'}
                             />
                         </div>
                         <div className={styles.groupInputs}>
@@ -227,7 +229,7 @@ const ChatBox = () => {
                             name='phone' 
                             value={phone} 
                             onChange={(e)=>setPhone(e.target.value)}
-                            placeholder={widgetConfig?.phonePlaceholder}
+                            placeholder={widgetConfig?.phonePlaceholder || '+1 (000) 000-0000'}
                             />
                         </div>
                         <div className={styles.groupInputs}>
@@ -237,7 +239,7 @@ const ChatBox = () => {
                             name='email' 
                             value={email} 
                             onChange={(e)=>setEmail(e.target.value)}
-                            placeholder={widgetConfig?.emailPlaceholder}
+                            placeholder={widgetConfig?.emailPlaceholder || 'example@gmail.com'}
                             />
                         </div>
                        <button className={styles.thankYouBtn} onClick={handleFormSubmit}>Thank you</button>
