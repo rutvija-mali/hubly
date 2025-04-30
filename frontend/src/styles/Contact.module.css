@@ -1,105 +1,122 @@
 .contactMainContainer {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .contactContainer {
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
 }
 
 .contactInfo {
-  width: 20%;
-  background-color: #FAFBFC;
-  border-right: 0.04rem solid #D1D6DA;
-  box-sizing: border-box;
+    width: 20%;
+    background-color: #FAFBFC;
+    border-right: 0.04rem solid #D1D6DA;
+    box-sizing: border-box;
 }
 
 .contactInfo h3 {
-  font-family: Inter;
-  font-weight: 500;
-  font-size: 1.13rem;
-  line-height: 1.75rem;
-  letter-spacing: -0.0025em;
-  color: #636060;
-  margin-left: 1rem;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1.13rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.0025em;
+    color: #636060;
+    margin-left: 1rem;
 }
 
 .contactHeader {
-  width: 100%;
-  height: 1.88rem;
-  margin-top: 3rem;
-  border-bottom: 0.06rem solid #D7D8D8;
-  box-sizing: border-box;
+    width: 100%;
+    height: 1.88rem;
+    border-bottom: 0.06rem solid #D7D8D8;
+    box-sizing: border-box;
+    margin-top: 3rem;
 }
 
 .contactHeader .chatBtn {
-  padding: 0.5rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  border-bottom: 0.13rem solid #B9BABA;
-  font-family: Inter;
-  font-weight: 500;
-  font-size: 0.88rem;
-  color: #888888;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-bottom: 0.13rem solid #B9BABA;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 0.88rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #888888;
 }
 
 .contactBody {
-  margin-top: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .userContact {
-  width: 100%;
-  height: 2.88rem;
-  margin-top: 0.5rem;
-  box-sizing: border-box;
+    width: 100%;
+    height: 2.88rem;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
 }
 
-.contact,
-.activeChat {
-  width: 98%;
-  height: 100%;
-  padding: 0.5rem;
-  margin-left: 0.31rem;
-  border-radius: 1.69rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  box-sizing: border-box;
+.contact {
+    width: 98%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 1.69rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-left: 0.31rem;
 }
 
 .activeChat {
-  background-color: #EFEFEF;
+    background-color: #EFEFEF;
+    width: 98%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 1.69rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-left: 0.31rem;
 }
 
 .activeUserChat {
-  border-left: 0.19rem solid var(--accent);
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+    border-left: 0.19rem solid var(--accent);
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
 }
 
 .chatInfo {
-  height: 100%;
+    height: 100%;
 }
 
 .chatInfo h5 {
-  font-family: Inter;
-  font-weight: 600;
-  font-size: 0.84rem;
-  color: #5E9BD5;
-  margin: 0;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 0.84rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #5E9BD5;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .chatInfo p {
-  font-family: Poppins;
-  font-weight: 400;
-  font-size: 0.69rem;
-  line-height: 0.81rem;
-  color: #9A9B9D;
-  margin-top: 0;
-  padding-top: 0.19rem;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 0.69rem;
+    line-height: 0.81rem;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #9A9B9D;
+    margin-top: 0;
+    padding-top: 0.19rem;
 }
 
 .chatBox {
@@ -111,10 +128,10 @@
 .chatboxTopSection {
   width: 100%;
   height: 2.5rem;
-  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0.5rem;
   border-bottom: 0.06rem solid #E4E4E4;
   box-sizing: border-box;
 }
@@ -123,11 +140,16 @@
   font-family: Inter;
   font-weight: 700;
   font-size: 0.94rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
   color: #86898C;
 }
 
+
 .chatSection {
   width: 95%;
+  height: auto;
   position: absolute;
   bottom: 1rem;
   left: 50%;
@@ -138,6 +160,9 @@
   font-family: Inter;
   font-weight: 500;
   font-size: 0.88rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
   color: #FF0000;
   text-align: center;
   margin-bottom: 2rem;
@@ -150,18 +175,17 @@
   gap: 0.5rem;
 }
 
-.chatCustomerText,
-.chatUserText {
-  width: 50%;
-}
-
 .chatCustomerText h5,
 .chatUserText h5 {
+  margin-top: 0%;
   font-family: Inter;
   font-weight: 600;
   font-size: 0.84rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
   color: #5E9BD5;
-  margin: 0;
+  margin-bottom: 0;
 }
 
 .chatCustomerText p,
@@ -169,11 +193,21 @@
   font-family: Inter;
   font-weight: 400;
   font-size: 0.86rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
   color: #9A9B9D;
 }
 
 .chatUser {
+  display: flex;
+  align-items: start;
   justify-content: end;
+}
+
+.chatCustomerText,
+.chatCustomerText {
+  width: 50%;
 }
 
 .chatUserText {
@@ -187,13 +221,16 @@
 .chatInput textarea {
   width: 100%;
   height: 6.63rem;
-  padding: 0.8rem;
   border: 0.06rem solid #D1D6DA;
   border-radius: 0.5rem;
+  padding: 0.8rem;
+  box-sizing: border-box;
   font-family: Inter;
   font-weight: 400;
   font-size: 1rem;
-  box-sizing: border-box;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
   position: relative;
 }
 
@@ -204,7 +241,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 50%;
   background-color: transparent;
 }
@@ -217,19 +254,33 @@
   border: 0.13rem solid var(--accent);
 }
 
-.teamDetails h5 {
-  font-family: Inter;
-  font-weight: 400;
-  font-size: 0.88rem;
-  color: #184E7F;
-  margin-left: 0.5rem;
-  box-sizing: border-box;
+.teamInfo {
+  width: 35%;
+  background-color: #FAFBFC;
+  border-left: 0.06rem solid #D1D6DA;
 }
 
-.message {
+.teamDetails h5{
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #184E7F;
+    margin-left: 0.5rem;
+    box-sizing: border-box;
+
+
+}
+
+.message{
   font-family: Inter;
   font-weight: 400;
   font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
   color: #00000073;
   margin-top: 2rem;
 }
