@@ -1,0 +1,24 @@
+.dateDivider {
+    display: flex;
+    align-items: center;
+    gap: 0.19rem;
+    margin: 1rem 0;
+  }
+  
+  .dateDivider .line {
+    flex-grow: 1;
+    height: 0.06rem;
+    background-color: #E4E4E4;
+  }
+  
+  .dateText {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 0.83rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #8C8E92;
+  }
+  
+  

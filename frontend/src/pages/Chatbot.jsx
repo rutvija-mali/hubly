@@ -187,6 +187,7 @@ const missedChatTimer = convertToSeconds(time);
                   type="time"
                   step="1"
                   value={time}
+                  className={styles.timeInput}
                   onChange={(e)=>setTime(e.target.value)}
                 />
                 <button className={styles.saveButton}>Save</button>

@@ -14,7 +14,6 @@
     font-weight: 500;
     font-size: 1.13rem;
     line-height: 1.75rem;
-    letter-spacing: -0.00015625rem;
     color: #636060;
   }
   
@@ -54,7 +53,7 @@
   .description {
     font-family: Inter;
     font-weight: 400;
-    font-size: 0.8125rem;
+    font-size: 0.81rem;
     letter-spacing: 0;
     vertical-align: middle;
   }
@@ -63,12 +62,12 @@
   .total {
     font-family: Nunito;
     font-weight: 600;
-    font-size: 1.5625rem;
+    font-size: 1.56rem;
     line-height: 1;
     letter-spacing: 0;
     color: #00D907;
     align-self: center;
-    min-width: 4.875rem;
+    min-width: 4.87rem;
   }
   
   .textBlock {

@@ -17,6 +17,9 @@ import { BsPersonCircle } from "react-icons/bs";
 import { useConfig } from '../context/WindgetConfigProvider';
 import { fetchCustomers,fetchTeamMembers } from '../services/UserService';
 import {fetchChats} from '../services/ChatService'
+import DateDivider from '../components/DateDivider';
+import { useLocation } from 'react-router-dom';
+
 
 
 const Contact = () => {
@@ -25,6 +28,8 @@ const Contact = () => {
   const [isTeamModel, setTeamModel] = useState(false)
   const [isResolvedOpen , setIsResolvedOpen] = useState(false)
   const [status,setStatus] = useState()
+  const location = useLocation();
+  const preselectedTicket = location.state?.ticket || null;
   const [selectedMember,setSelectedMember] = useState()
   const [teamMembers, setTeamMembers] = useState([])
   const [customers,setCustomers] = useState([])
@@ -51,10 +56,19 @@ const Contact = () => {
       fetchCustomers(user.id,user.role,setCustomers)
     }
   },[user])
+  useEffect(() => {
+    if (preselectedTicket && customers.length > 0) {
+      const matchedCustomer = customers.find(
+        (customer) => customer.ticketId === preselectedTicket._id
+      );
+      if (matchedCustomer) {
+        setSelectedChat(matchedCustomer);
+      }
+    }
+  }, [preselectedTicket, customers]);
+  
 
-  useEffect(()=>{
-      
-      
+useEffect(()=>{    
     if (selectedChat && selectedChat.ticketId) {
       if (user.role === 'admin' && user.id !== selectedChat.ticketAssigned) {
         setIsUnauthorized(true);
@@ -195,21 +209,13 @@ const Contact = () => {
              <div className={styles.chatSection}>
                 { isUnauthorized ? 
                  (<>
-                    <div className={styles.dateDivider}>
-                      <div className={styles.line}></div>
-                      <span className={styles.dateText}>{new Date().toDateString()}</span>
-                      <div className={styles.line}></div>
-                    </div>
+                    <DateDivider/>
                     <p className={styles.message}>This chat is assigned to new team member. you no longer have access </p>
                 
                  </>) :(selectedChat?.ticketStatus == 'resolved')?
                  (
                   <>
-                    <div className={styles.dateDivider}>
-                      <div className={styles.line}></div>
-                      <span className={styles.dateText}>{new Date().toDateString()}</span>
-                      <div className={styles.line}></div>
-                    </div>
+                    <DateDivider/>
                     <p className={styles.message}>This chat has been resolved </p>
                 
                  </>
@@ -217,11 +223,7 @@ const Contact = () => {
                  ( chats&& chats.length > 0? chats.map((chat,index)=>(
                    <>
                     {showDateDivider(chat, index) && (
-                      <div className={styles.dateDivider}>
-                        <div className={styles.line}></div>
-                        <span className={styles.dateText}>{new Date(chat.timestamp).toDateString()}</span>
-                        <div className={styles.line}></div>
-                      </div>
+                       <DateDivider/>
                     )}
                    {chat.senderType === 'admin'||chat.senderType === 'member'|| chat.senderType === 'bot'?(
                     <div className={styles.chatUser}>

@@ -53,7 +53,13 @@ const Ticket = ({ticket}) => {
                     </div>
                 </div>
                 <div className={styles.ticketFooterRight}>
-                    <Link className={styles.link}>Open Link</Link>
+                <Link 
+                    className={styles.link}
+                    to="/layout/contact-center"
+                    state={{ ticket }}
+                    >
+                    Open Link
+                </Link>
                 </div>
            </div>
        </div>
