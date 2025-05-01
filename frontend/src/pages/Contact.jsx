@@ -181,7 +181,7 @@ useEffect(()=>{
            </div>
            <div className={styles.contactBody}>
              {customers && customers.length > 0 ? customers.map((customer)=>(
-              <div className={`${styles.userContact} ${selectedChat?._id === customer._id ? styles.activeUserChat : ''}` }>
+              <div key={customer._id} className={`${styles.userContact} ${selectedChat?._id === customer._id ? styles.activeUserChat : ''}` }>
                 <div className={`${styles.contact} ${selectedChat?._id === customer._id ? styles.activeChat : ''}`} onClick={() =>   setSelectedChat(customer)}>
                   <div className={styles.img}>
                     <img src={profileSVG} alt="" />
@@ -221,7 +221,7 @@ useEffect(()=>{
                  </>
                  ):
                  ( chats&& chats.length > 0? chats.map((chat,index)=>(
-                   <>
+                   <React.Fragment key={index}>
                     {showDateDivider(chat, index) && (
                        <DateDivider/>
                     )}
@@ -248,7 +248,7 @@ useEffect(()=>{
                     </>
                     )}
                     
-                   </>
+                   </React.Fragment>
                   )):
                   <div>
                     <p className={styles.message}>No chats available</p>

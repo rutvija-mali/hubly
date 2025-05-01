@@ -49,6 +49,12 @@ useEffect(() => {
 
 
 const validateForm = () => {
+  console.log("first name :",firstName);
+  console.log("last name :",lastName);
+  console.log("email :",email);
+
+  console.log("phone :",phone);
+  
   if (!firstName.trim()) {
     toast.error("First name is required.");
     return false;
@@ -57,10 +63,7 @@ const validateForm = () => {
     toast.error("Last name is required.");
     return false;
   }
-  if (!lastName.trim()) {
-    toast.error("User name is required.");
-    return false;
-  }
+  
   if (!email.trim() || !/\S+@\S+\.\S+/.test(email)) {
     toast.error("Enter a valid email.");
     return false;
