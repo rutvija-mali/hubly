@@ -37,6 +37,10 @@ const AddTeamMember = ({ onCancel, team, setIsEdit, fetchTeamMembers }) => {
     event.preventDefault();
     if (!user) return;
     const adminId = user.role === 'admin' ? user.id : user.adminId
+    console.log(" admin id is ", adminId
+      
+    );
+    
     try {
       if (!validateForm()) return;
       setLoading(true);
