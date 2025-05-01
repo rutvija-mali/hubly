@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from 'react'
+import React, { useState ,useEffect, useCallback} from 'react'
 import styles from '../styles/Dashboard.module.css'
 import { RiSearch2Line } from "react-icons/ri"; 
 import { PiShoppingBagLight } from "react-icons/pi";
@@ -7,6 +7,7 @@ import {useAuth} from '../context/AuthProvider'
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 import axios from 'axios';
 import {toast} from 'react-toastify'
+import debounce from 'lodash/debounce'
 
 const Dashboard = () => {
   const [isActiveTab, setActiveTab] = useState("All Tickets")
@@ -15,28 +16,43 @@ const Dashboard = () => {
   const [searchQuery, setSearchQuery] = useState()
   const {user} = useAuth()
 
-  useEffect(()=>{
-    const fetchAssignedTickets = async(userId)=>{
-      try {
-         const response = await axios.get(`${API_BASE_URL}/api/tickets/${userId}`,{
-          params:{
-            status:isActiveTab,
-            name:searchQuery
-          }
-         })
+  const fetchAssignedTickets = async(userId , name = '')=>{
+    try {
+       const response = await axios.get(`${API_BASE_URL}/api/tickets/${userId}`,{
+        params:{
+          status:isActiveTab,
+          name:name
+        }
+       })
 
-         if(response.status === 200){
-          setTickets(response.data)
-         }
-      } catch (error) {
-        toast.error(error.message||'Something went wrong')
-      }
+       if(response.status === 200){
+        setTickets(response.data)
+       }
+    } catch (error) {
+      toast.error(error.message||'Something went wrong')
     }
+  }
+
+
+  useEffect(()=>{
 
     if(user){
       fetchAssignedTickets(user.id)
     }
-  },[user,isActiveTab,searchQuery])
+  },[user,isActiveTab])
+
+  const debouncedFetch = useCallback(
+    debounce((userId, search) => {
+      fetchAssignedTickets(userId, search);
+    }, 500),
+    [] 
+  );
+  useEffect(() => {
+    if (user && debouncedFetch) {
+      debouncedFetch(user.id, searchQuery);
+    }
+  }, [searchQuery]);
+
   return (
     <div className={styles.dashboardMainContainer}>
        <div className={styles.dashboardContainer}>

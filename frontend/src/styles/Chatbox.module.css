@@ -32,9 +32,8 @@
   border: 0.13rem solid #FFFFFF;
   border-radius: 50%;
   position: absolute;
-  top: 2.94rem;
-  left: 0.63rem;
-  transform: translate(10%, 30%);
+  top: 2.4rem;
+  left: 2.3rem;
 }
 
 .Header h4 {
