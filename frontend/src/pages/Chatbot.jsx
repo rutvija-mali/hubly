@@ -46,21 +46,21 @@ const missedChatTimer = convertToSeconds(time);
     }
   }
   useEffect(() => {
-    if (config && config[0]) {
-      setHeaderColor(config[0].headerColor || '#33475B')
-      setBgColor(config[0].backgroundColor || '#EEEEEE')
-      setFirstMsg(config[0].customMessage1 || 'How can i help you?')
-      setSecondMsg(config[0].customMessage2 || 'Ask me anything!')
-      setPhone(config[0].phonePlaceholder || '+1 (000) 000-0000')
-      setEmail(config[0].emailPlaceholder || 'email@gmail.com')
-      setName(config[0].namePlaceholder || 'Your name')
-      setWelcomeMsg(config[0].welcomeMessage || "👋 Want to chat about Hubly? I'm an chatbot here to help you find your way.")
+    if (config ) {
+      setHeaderColor(config.headerColor || '#33475B')
+      setBgColor(config.backgroundColor || '#EEEEEE')
+      setFirstMsg(config.customMessage1 || 'How can i help you?')
+      setSecondMsg(config.customMessage2 || 'Ask me anything!')
+      setPhone(config.phonePlaceholder || '+1 (000) 000-0000')
+      setEmail(config.emailPlaceholder || 'email@gmail.com')
+      setName(config.namePlaceholder || 'Your name')
+      setWelcomeMsg(config.welcomeMessage || "👋 Want to chat about Hubly? I'm an chatbot here to help you find your way.")
       
      
-      if (typeof config[0].missedChatTimer === 'number') {
-         setTime(formateTime(config[0].missedChatTimer))
+      if (typeof config.missedChatTimer === 'number') {
+         setTime(formateTime(config.missedChatTimer))
       } else {
-        setTime(config[0].missedChatTimer || "1:00:00")
+        setTime(config.missedChatTimer || "1:00:00")
       }
     }
   }, [config])
