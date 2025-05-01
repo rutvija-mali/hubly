@@ -70,6 +70,7 @@ const ChatBox = () => {
     if(currentMsg.trim() === '' )return;
     customerId = localStorage.getItem('customerId')
     const ticketId = localStorage.getItem('ticketId')
+    console.log('Ticket ID in sendMessage():', ticketId);
     const newMessages = [...messages,{        
         senderType: 'customer',
         message: currentMsg,
