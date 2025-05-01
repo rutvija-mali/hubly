@@ -69,7 +69,7 @@ const ChatBox = () => {
   const sendMessage = async()=>{
     if(currentMsg.trim() === '' )return;
     customerId = localStorage.getItem('customerId')
-    const ticketId = localStorage.getItem('ticketID')
+    const ticketId = localStorage.getItem('ticketId')
     const newMessages = [...messages,{        
         senderType: 'customer',
         message: currentMsg,
@@ -105,7 +105,7 @@ const ChatBox = () => {
   }
 
   const handlePressKeyDown =(e)=>{
-    if(e.key === 'Enter' && !e.shiftKey){
+    if(e.key === 'Enter' && !e.shifKey){
         e.preventDefault()
         sendMessage()
     }
