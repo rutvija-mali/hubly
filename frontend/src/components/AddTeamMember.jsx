@@ -36,7 +36,7 @@ const AddTeamMember = ({ onCancel, team, setIsEdit, fetchTeamMembers }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!user) return;
-
+    const adminId = user.role === 'admin' ? user.id : user.adminId
     try {
       if (!validateForm()) return;
       setLoading(true);
@@ -55,7 +55,7 @@ const AddTeamMember = ({ onCancel, team, setIsEdit, fetchTeamMembers }) => {
 
       setFormData({ username: '', name: '', email: '', role: 'admin' });
       setIsEdit(false);
-      fetchTeamMembers();
+      fetchTeamMembers(adminId);
       setLoading(false);
     } catch (error) {
       toast.error(error.message || 'Something went wrong!');
