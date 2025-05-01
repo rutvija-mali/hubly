@@ -34,7 +34,7 @@ useEffect(() => {
         setLastName(lName);
         setEmail(email);
         setUsername(username)
-        setPhone(phone)
+        setPhone(phone || '')
     
    
       }
@@ -68,10 +68,11 @@ const validateForm = () => {
     toast.error("Enter a valid email.");
     return false;
   }
-  if (!phone.trim().length === 10) {
-    toast.error("Enter a valid phone.");
+  if (phone && (phone.trim().length !== 10)) {
+    toast.error("Phone number must be exactly 10 digits.");
     return false;
   }
+  
   if (password && password.length < 6) {
     toast.error("Password must be at least 6 characters long.");
     return false;

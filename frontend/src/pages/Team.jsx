@@ -39,7 +39,7 @@ const Team = () => {
   useEffect(()=>{
     if(user){
       const adminId = user.role === 'admin'?user.id : user.adminId
-      fetchTeamMembers(adminId)
+      fetchTeamMembers(adminId,setTeam)
     }
   },[user])
     
@@ -55,7 +55,7 @@ const Team = () => {
       const response = await axios.delete(`${API_BASE_URL}/api/users/member/${memberId}/adminId/${adminId}`)
       if(response.status === 200){
          toast.success('Member deleted successfuly')
-         fetchTeamMembers()
+         fetchTeamMembers(adminId,setTeam)
          setIsDelete(false)
       }
     } catch (error) {
