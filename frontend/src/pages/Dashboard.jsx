@@ -57,7 +57,7 @@ const Dashboard = () => {
              </div>
              <div className={styles.ticketContainer}>
                {tickets && tickets.length > 0? tickets.map((ticket)=>(
-                <Ticket ticket={ticket}/>
+                <Ticket ticket={ticket} key={ticket._id}/>
                )):<div> No Resolved tickets available</div>}
              </div>
          </div>
