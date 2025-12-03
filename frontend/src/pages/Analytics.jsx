@@ -44,7 +44,7 @@ const Analytics = () => {
         <h3 className={styles.mainHeading}>Analytics</h3>
 
         <div className={styles.chartsSection}>
-          <h3 className={styles.sectionHeading}>Missed charts</h3>
+          <h3 className={styles.sectionHeading}>Missed chats</h3>
           <MissedChatsChart />
         </div>
 
