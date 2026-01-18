@@ -35,7 +35,6 @@ UserRouter.post('/customer',async(req,res)=>{
 })
 
 UserRouter.post("/logout", async(req,res)=>{
-    console.log("logout is being called");
     
    res.clearCookie('token',{
     httpOnly:true,
@@ -45,6 +44,7 @@ UserRouter.post("/logout", async(req,res)=>{
 
    res.status(200).json({message:'User logged out successfully'})
 })
+
 UserRouter.post('/register',async(req,res)=>{
 try {
     const {firstName,lastName,email,password,username,toc} = req.body
@@ -139,7 +139,6 @@ UserRouter.post('/:adminId',auth,async(req,res)=>{
 
 UserRouter.get('/all/',auth,async(req,res)=>{
     try {
-        console.log("hey"); 
         return res.status(200).json(req.user)
     } catch (error) {
         errorLogger(error, req, res)
@@ -182,8 +181,7 @@ UserRouter.put('/memberId/:id/adminId/:adminId',auth,async(req,res)=>{
         const id = req.params.id
         const adminId = req.params.adminId
         const {username,name,email,role} = req.body
-          console.log("connecting.................");
-          
+         
         const admin = await User.findById(adminId)
         if(!admin){
             return res.status(404).json({message:'Admin not found'})

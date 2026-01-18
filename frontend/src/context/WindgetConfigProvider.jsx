@@ -4,7 +4,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 import {toast} from 'react-toastify'
 
 const widgetContext = createContext()
-export const WindgetConfigProvider = ({children}) => {
+export const WidgetConfigProvider = ({children}) => {
 const [config,setConfig] = useState(null)
     const fetchConfig = async () =>{
 

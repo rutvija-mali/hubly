@@ -1,13 +1,14 @@
-import React, { useState,useRef, useEffect } from 'react';
+import React, { useState,useRef, useEffect, memo } from 'react';
 import styles from '../styles/Chatbox.module.css';
 import avatar from '../assets/Avatar.svg';
 import { RiSendPlaneFill } from "react-icons/ri";
 import { useConfig } from '../context/WindgetConfigProvider';
+import LoadingSkeleton from './LoadingSkeleton';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 
-const ChatBox = () => {
+const ChatBox = memo(() => {
   const [currentMsg, setCurrentMsg] = useState('');
   const [messages, setMessages] = useState([]);
   const messageEndRef = useRef(null)
@@ -15,6 +16,7 @@ const ChatBox = () => {
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
+  const [loading, setLoading] = useState(false)
   const date = new Date()
   const year = date.getFullYear()
   const month = String(date.getMonth() + 1).padStart(2, '0') 
@@ -45,6 +47,7 @@ const ChatBox = () => {
 
   useEffect(()=>{
     const fetchChats = async(sessionId,customerId) =>{
+      setLoading(true)
       try {
         const response = await axios.get(`${API_BASE_URL}/api/chats/`,{
           params:{
@@ -57,6 +60,8 @@ const ChatBox = () => {
         }
       } catch (error) {
         toast.error(error.message || 'Something went wrong')
+      } finally {
+        setLoading(false)
       }
     }
 
@@ -70,7 +75,7 @@ const ChatBox = () => {
     if(currentMsg.trim() === '' )return;
     customerId = localStorage.getItem('customerId')
     const ticketId = localStorage.getItem('ticketId')
-    console.log('Ticket ID in sendMessage():', ticketId);
+    
     const newMessages = [...messages,{        
         senderType: 'customer',
         message: currentMsg,
@@ -103,6 +108,7 @@ const ChatBox = () => {
             setShowForm(true)
         },500)
     }
+    
   }
 
   const handlePressKeyDown =(e)=>{
@@ -181,74 +187,83 @@ const ChatBox = () => {
       <div className={styles.Body} style={{backgroundColor:widgetConfig?.backgroundColor }}>
         {/* Messages Section */}
         <div className={styles.mainSection}>
-            { customerId === null &&
+            {loading ? (
               <div className={styles.SupportMsg}>
-                <div className={styles.img}>
-                    <img src={avatar} alt="avatar" />
-                </div>
+                <LoadingSkeleton type="avatar" className="mr-3" />
                 <div className={styles.msg}>
-                    <p className={styles.message}>{widgetConfig?.customMessage1||'How can i help you?'}</p>
-                    <p className={styles.message}>{widgetConfig?.customMessage2 || 'Ask me anything!'}</p>
+                  <LoadingSkeleton type="text" lines={2} />
                 </div>
-              </div> 
-
-            }
-          {messages&& messages.map((msg,index)=>(
-            msg.senderType === 'admin'|| msg.senderType === 'bot' || msg.senderType === 'member'?(
-                <div className={styles.SupportMsg} key={index}>
+              </div>
+            ) : (
+              <>
+                { customerId === null &&
+                  <div className={styles.SupportMsg}>
                     <div className={styles.img}>
-                      <img src={avatar} alt="avatar" />
+                        <img src={avatar} alt="avatar" />
                     </div>
                     <div className={styles.msg}>
-                      <p className={styles.message}>{msg.message}</p>
+                        <p className={styles.message}>{widgetConfig?.customMessage1||'How can i help you?'}</p>
+                        <p className={styles.message}>{widgetConfig?.customMessage2 || 'Ask me anything!'}</p>
                     </div>
-                </div> 
-            ):(
-                <div className={styles.customerMsg} key={index}>
-                    <p className={styles.message}>{msg.message}</p>
-                </div>
-            )
-          ))}
-          { showForm && 
-            <div className={styles.SupportMsg}>
-                <div className={styles.img}>
-                    <img src={avatar} alt="avatar" />
-                </div>
-                <div className={styles.customInputContainer}>
-                   <h5 className={styles.heading}>Introduce Yourself</h5>
-                   <form className={styles.form}>
-                        <div className={styles.groupInputs}>
-                            <label htmlFor="name">Your name</label>
-                            <input type="text" name='name' 
-                            value={name} onChange={(e)=>setName(e.target.value)}
-                            placeholder={widgetConfig?.namePlaceholder ||'Your name'}
-                            />
-                        </div>
-                        <div className={styles.groupInputs}>
-                            <label htmlFor="phone">Your phone</label>
-                            <input type="text" 
-                            name='phone' 
-                            value={phone} 
-                            onChange={(e)=>setPhone(e.target.value)}
-                            placeholder={widgetConfig?.phonePlaceholder || '+1 (000) 000-0000'}
-                            />
-                        </div>
-                        <div className={styles.groupInputs}>
-                            <label htmlFor="email">Your email</label>
-                            <input 
-                            type="text" 
-                            name='email' 
-                            value={email} 
-                            onChange={(e)=>setEmail(e.target.value)}
-                            placeholder={widgetConfig?.emailPlaceholder || 'example@gmail.com'}
-                            />
-                        </div>
-                       <button className={styles.thankYouBtn} onClick={handleFormSubmit}>Thank you</button>
-                    </form>
-                </div>
-            </div> 
-
-          }
+                  </div> 
+                }
+                {messages&& messages.map((msg,index)=>(
+                  msg.senderType === 'admin'|| msg.senderType === 'bot' || msg.senderType === 'member'?(
+                      <div className={styles.SupportMsg} key={index}>
+                          <div className={styles.img}>
+                            <img src={avatar} alt="avatar" />
+                          </div>
+                          <div className={styles.msg}>
+                            <p className={styles.message}>{msg.message}</p>
+                          </div>
+                      </div> 
+                  ):( 
+                      <div className={styles.customerMsg} key={index}>
+                          <p className={styles.message}>{msg.message}</p>
+                      </div>
+                  )
+                ))}
+                { showForm && 
+                  <div className={styles.SupportMsg}>
+                      <div className={styles.img}>
+                          <img src={avatar} alt="avatar" />
+                      </div>
+                      <div className={styles.customInputContainer}>
+                         <h5 className={styles.heading}>Introduce Yourself</h5>
+                         <form className={styles.form}>
+                              <div className={styles.groupInputs}>
+                                  <label htmlFor="name">Your name</label>
+                                  <input type="text" name='name' 
+                                  value={name} onChange={(e)=>setName(e.target.value)}
+                                  placeholder={widgetConfig?.namePlaceholder ||'Your name'}
+                                  />
+                              </div>
+                              <div className={styles.groupInputs}>
+                                  <label htmlFor="phone">Your phone</label>
+                                  <input type="text" 
+                                  name='phone' 
+                                  value={phone} 
+                                  onChange={(e)=>setPhone(e.target.value)}
+                                  placeholder={widgetConfig?.phonePlaceholder || '+1 (000) 000-0000'}
+                                  />
+                              </div>
+                              <div className={styles.groupInputs}>
+                                  <label htmlFor="email">Your email</label>
+                                  <input 
+                                  type="text" 
+                                  name='email' 
+                                  value={email} 
+                                  onChange={(e)=>setEmail(e.target.value)}
+                                  placeholder={widgetConfig?.emailPlaceholder || 'example@gmail.com'}
+                                  />
+                              </div>
+                             <button className={styles.thankYouBtn} onClick={handleFormSubmit}>Thank you</button>
+                          </form>
+                      </div>
+                  </div> 
+                }
+              </>
+            )}
           <div ref={messageEndRef}></div>
 
         </div>
@@ -272,6 +287,6 @@ const ChatBox = () => {
       </div>
     </div>
   );
-};
+});
 
 export default ChatBox;          

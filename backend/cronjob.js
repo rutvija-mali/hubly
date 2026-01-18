@@ -5,7 +5,6 @@ import Chat from './models/Chat.js'
  cron.schedule('*/10 * * * *',async()=>{
     try {
         const allCustomersChats = await Chat.find({senderType :'customer'})
-        console.log("cron is runned");
         
         const widgetConfig = await  WidgetConfig.findOne()
 
@@ -21,6 +20,7 @@ import Chat from './models/Chat.js'
             const now = new Date()
             const chatTime = new Date(chat.timestamp)
             const differenceInSec = (now - chatTime )/(1000)
+
 
             if(differenceInSec > widgetConfig.missedChatTimer){
                 chat.missed = true 

@@ -117,7 +117,7 @@ ChatRouter.get('/get-count',auth,async(req,res)=>{
 ChatRouter.get('/get-missedChat-count',auth,async(req,res)=>{
     try {
         const missedChats = await Chat.find({missed:true})
-          console.log(missedChats);
+
           
         const weekMap = {}
         let weekCounter = 1
@@ -141,8 +141,6 @@ ChatRouter.get('/get-missedChat-count',auth,async(req,res)=>{
               missedChatperWeek[weekLabel]++
             }
         })
-
-        console.log(missedChatperWeek);
         
         const chatData = Object.entries(missedChatperWeek).map(([name,chats])=>({
             name,

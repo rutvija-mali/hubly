@@ -3,6 +3,7 @@ import styles from '../styles/Dashboard.module.css'
 import { RiSearch2Line } from "react-icons/ri"; 
 import { PiShoppingBagLight } from "react-icons/pi";
 import Ticket from '../components/Ticket';
+import LoadingSkeleton from '../components/LoadingSkeleton';
 import {useAuth} from '../context/AuthProvider'
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 import axios from 'axios';
@@ -11,12 +12,13 @@ import debounce from 'lodash/debounce'
 
 const Dashboard = () => {
   const [isActiveTab, setActiveTab] = useState("All Tickets")
-
   const [tickets, setTickets] = useState()
   const [searchQuery, setSearchQuery] = useState()
+  const [loading, setLoading] = useState(false)
   const {user} = useAuth()
 
   const fetchAssignedTickets = async(userId , name = '')=>{
+    setLoading(true)
     try {
        const response = await axios.get(`${API_BASE_URL}/api/tickets/${userId}`,{
         params:{
@@ -30,6 +32,8 @@ const Dashboard = () => {
        }
     } catch (error) {
       toast.error(error.message||'Something went wrong')
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -72,9 +76,17 @@ const Dashboard = () => {
                 ))}
              </div>
              <div className={styles.ticketContainer}>
-               {tickets && tickets.length > 0? tickets.map((ticket)=>(
-                <Ticket ticket={ticket} key={ticket._id}/>
-               )):<div> No Resolved tickets available</div>}
+               {loading ? (
+                 Array.from({ length: 3 }).map((_, index) => (
+                   <LoadingSkeleton key={index} type="card" className="mb-4" />
+                 ))
+               ) : tickets && tickets.length > 0 ? (
+                 tickets.map((ticket) => (
+                   <Ticket ticket={ticket} key={ticket._id} />
+                 ))
+               ) : (
+                 <div>No tickets available</div>
+               )}
              </div>
          </div>
        </div>

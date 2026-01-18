@@ -4,6 +4,7 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import { AuthProvider } from './context/AuthProvider'
 import { ScreenSizeProvider } from './context/ScreenSizeProvider'
+import ErrorBoundary from './components/ErrorBoundary'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import Layout from './pages/Layout'
@@ -15,16 +16,16 @@ import Team from './pages/Team'
 import Analytics from './pages/Analytics'
 import '@mobiscroll/react-lite/dist/css/mobiscroll.min.css';
 import axios from 'axios'
-import { WindgetConfigProvider } from './context/WindgetConfigProvider'
+import { WidgetConfigProvider } from './context/WindgetConfigProvider'
 
 function App() {
 
   axios.defaults.withCredentials = true
   return (
-    
+    <ErrorBoundary>
       <ScreenSizeProvider>
         <AuthProvider>
-          <WindgetConfigProvider>
+          <WidgetConfigProvider>
           <Router>
             <Routes>
               
@@ -54,10 +55,10 @@ function App() {
             pauseOnHover
             theme="colored"
           />
-          </WindgetConfigProvider>
+          </WidgetConfigProvider>
         </AuthProvider>
       </ScreenSizeProvider>
-    
+    </ErrorBoundary>
   )
 }
 

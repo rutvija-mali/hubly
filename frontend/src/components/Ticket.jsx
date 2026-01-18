@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, memo } from 'react'
 import styles from '../styles/Ticket.module.css'
 import profileSvg from '../assets/img.svg'
 import {Link} from 'react-router-dom'
 
-const Ticket = ({ticket}) => {
+const Ticket = memo(({ticket}) => {
     const [user,setUser] = useState(ticket.createdBy)
 
     const options = {
@@ -65,6 +65,6 @@ const Ticket = ({ticket}) => {
        </div>
     </div>
   )
-}
+})
 
 export default Ticket
