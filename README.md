@@ -178,8 +178,8 @@ npm run lint
 ## 🔑 Demo Credentials
 
 **Admin Login:**
-- Username: `Xyz@123`
-- Password: `Pass@123`
+- Username: `admin@123`
+- Password: `Admin@123`
 
 ---
 
