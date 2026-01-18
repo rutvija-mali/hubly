@@ -1,10 +1,10 @@
 # Hubly - Customer Support Platform
 
-A full-stack customer support platform built with React, Node.js, and MongoDB. Features real-time chat, ticket management, team collaboration, and analytics dashboard.
+A full-stack customer support platform built with React, Node.js, and MongoDB. Features  chat, ticket management, team collaboration, and analytics dashboard.
 
 ## 🌟 Features
 
-- **Real-time Chat System**: Live chat between customers and support agents
+- **Chat System**: Chat between customers and support agents
 - **Ticket Management**: Create, assign, and track support tickets
 - **Team Collaboration**: Multi-user support with role-based access
 - **Analytics Dashboard**: Track performance metrics and chat statistics
