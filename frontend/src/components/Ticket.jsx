@@ -45,7 +45,7 @@ const Ticket = memo(({ticket}) => {
            </div>
            <div className={styles.ticketFooter}>
                 <div className={styles.ticketFooterLeft}>
-                    <img src={profileSvg} alt="" />
+                    <img src={profileSvg} alt="Customer profile" width={32} height={32} />
                     <div>
                         <p className={styles.name}>{user.name}</p>
                         <p>{user.phone}</p>

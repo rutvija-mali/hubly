@@ -27,7 +27,13 @@ const UserDetails = ({selectedChat}) => {
   return (
     <div className={styles.userDetails}>
       <div className={styles.userDetailsTopSection}>
-        <img src={profileSVG} alt="Profile" className={styles.profileImage} />
+        <img
+          src={profileSVG}
+          alt="Profile"
+          className={styles.profileImage}
+          width={40}
+          height={40}
+        />
         <h5>Chat </h5>
       </div>
       <h5>Details</h5>
@@ -35,7 +41,13 @@ const UserDetails = ({selectedChat}) => {
          <div className={styles.userInfo}>
           {userInfo.map((info, index) => (
             <div key={index} className={styles.userInfoItem}>
-              <img src={info.icon} alt="Icon" className={styles.userInfoIcon} />
+              <img
+                src={info.icon}
+                alt="Icon"
+                className={styles.userInfoIcon}
+                width={20}
+                height={20}
+              />
               <p className={styles.userInfoValue}>{info.value}</p>
             </div>
           ))}

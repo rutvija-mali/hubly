@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Topbar from '../components/Topbar'
-import heroSectionImg from '../assets/heroImg.png'
+import heroSectionImg from '../assets/heroImg.webp'
 import { IoArrowForward } from "react-icons/io5";
 import videoSvg from '../assets/videoSvg.svg'
 import adobeSvg from '../assets/adobeSvg.svg'
@@ -9,7 +9,7 @@ import elasticSvg from '../assets/elasticSvg.svg'
 import opendoorSvg from '../assets/opendoorSvg.svg'
 import airtableSvg from '../assets/airTableSvg.svg'
 import framerSvg from '../assets/FramerSvg.svg'
-import multiplePlatformImg from '../assets/multiplePlatformImg.png'
+import multiplePlatformImg from '../assets/multiplePlatformImg.webp'
 import { Card } from '../components/Card';
 import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
@@ -105,6 +105,7 @@ const Home = () => {
               alt="Hubly CRM dashboard illustration"
               width={800}
               height={600}
+              fetchPriority="high"
             />
           </div>
        </div>
@@ -175,8 +176,20 @@ const Home = () => {
           }
          <div className={styles.chatbot}>
             {isChatOpen?
-              <img src={crossSvg} alt=""  onClick={()=>setIsChatOpen(false)}/>
-              :<img src={msgSVG} alt=""  onClick={()=>setIsChatOpen(true)}/>
+              <img
+                src={crossSvg}
+                alt="Close chat"
+                width={48}
+                height={48}
+                onClick={()=>setIsChatOpen(false)}
+              />
+              :<img
+                src={msgSVG}
+                alt="Open chat"
+                width={64}
+                height={64}
+                onClick={()=>setIsChatOpen(true)}
+              />
             }
          </div>
         <Footer/>

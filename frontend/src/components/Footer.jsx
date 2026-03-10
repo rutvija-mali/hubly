@@ -90,7 +90,7 @@ const Footer = () => {
                 <div className={styles.SocialMediaIcons}>
                     {socialIcons.map((icon)=>(
                        <a href="#">
-                        <img src={icon.icon} alt={icon.name} />
+                        <img src={icon.icon} alt={icon.name} width={20} height={20} />
                        </a>
                     ))}
                 </div>

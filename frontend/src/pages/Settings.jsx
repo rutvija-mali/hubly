@@ -190,7 +190,7 @@ const handleSubmit = async(event) => {
                   </div>
                   
                   <span className={styles.infoIcon}>
-                    <img src={infoIcon} alt="info"  />
+                    <img src={infoIcon} alt="info" width={16} height={16} />
                     <div className={styles.tooltip}>User will be logged out immediately</div>
                   </span>
                   
@@ -210,7 +210,7 @@ const handleSubmit = async(event) => {
                   </div>
                   
                   <span className={styles.infoIcon}>
-                    <img src={infoIcon} alt="info"  />
+                    <img src={infoIcon} alt="info" width={16} height={16} />
                     <div className={styles.tooltip}>User will be logged out immediately</div>
                   </span>
                   
@@ -229,7 +229,7 @@ const handleSubmit = async(event) => {
                     />
                   </div>
                   <span className={styles.infoIcon}>
-                    <img src={infoIcon} alt="info"  />
+                    <img src={infoIcon} alt="info" width={16} height={16} />
                     <div className={styles.tooltip}>User will be logged out immediately</div>
                   </span>
                 </div>
@@ -247,7 +247,7 @@ const handleSubmit = async(event) => {
                     />
                   </div>
                   <span className={styles.infoIcon}>
-                    <img src={infoIcon} alt="info"  />
+                    <img src={infoIcon} alt="info" width={16} height={16} />
                     <div className={styles.tooltip}>User will be logged out immediately</div>
                   </span>
                 </div>

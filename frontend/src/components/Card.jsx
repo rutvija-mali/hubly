@@ -19,7 +19,7 @@ export const Card = ({heading,info,money,includedIcons}) => {
              {includedIcons.map((item,index)=>(
                 <div key={index} className={styles.feature}>
                     <span className={styles.checkListIcon}>
-                      <img src={checkListIcon} alt="" />
+                      <img src={checkListIcon} alt="" width={16} height={16} />
                     </span>
                     <span>{item}</span>
                 </div>
