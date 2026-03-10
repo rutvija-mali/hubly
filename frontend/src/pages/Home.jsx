@@ -114,6 +114,7 @@ const Home = () => {
                 fetchPriority="high"
               />
             </picture>
+
           </div>
        </div>
         <div className={styles.mediaSection}>
