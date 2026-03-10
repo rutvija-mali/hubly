@@ -109,8 +109,8 @@ const Home = () => {
               <img
                 src={heroSectionImg}
                 alt="Hubly CRM dashboard illustration"
-                width={800}
-                height={600}
+                width={520}
+                height={390}
                 fetchPriority="high"
               />
             </picture>
@@ -150,8 +150,8 @@ const Home = () => {
               <img
                 src={multiplePlatformImg}
                 alt="Hubly across multiple platforms"
-                width={800}
-                height={600}
+                width={520}
+                height={390}
               />
             </div>
           </div>

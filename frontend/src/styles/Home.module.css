@@ -322,7 +322,9 @@
        display: flex;
        width: 90%;
        overflow-x: auto;
-        white-space: nowrap;
+       white-space: nowrap;
+       height: 70px;
+       align-items: center;
     }
   
     .topSection h2, .planSection h2 {
