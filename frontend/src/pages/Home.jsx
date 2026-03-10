@@ -79,7 +79,7 @@ const Home = () => {
   return (
     <main className={styles.homeMainContainer}>
        <Topbar/>
-       <div className={styles.heroSection}>
+          <div className={styles.heroSection}>
           <div className={styles.leftHeroSection}>
              <h1>Grow Your Business Faster with Hubly CRM</h1>
              <p>Manage leads, automate workflows, and close deals effortlessly—all in one powerful platform</p>
@@ -89,18 +89,35 @@ const Home = () => {
                   <IoArrowForward/>
                 </button>
                 <button className={`${styles.HeroBtns} ${styles.videoBtn}`}>
-                 <img src={videoSvg} alt="" />
+                 <img
+                  src={videoSvg}
+                  alt="Play product video"
+                  width={24}
+                  height={24}
+                 />
                   Watch Video
                 </button>                 
              </div>
           </div>
           <div className={styles.imgContainer}>
-            <img src={heroSectionImg} alt="" />
+            <img
+              src={heroSectionImg}
+              alt="Hubly CRM dashboard illustration"
+              width={800}
+              height={600}
+            />
           </div>
        </div>
         <div className={styles.mediaSection}>
           {partnerLogos.map((logo, index) => (
-            <img key={index} src={logo.src} alt={logo.alt} className={styles.partnerLogo} />
+            <img
+              key={index}
+              src={logo.src}
+              alt={logo.alt}
+              className={styles.partnerLogo}
+              width={120}
+              height={40}
+            />
           ))}
 
         </div>
@@ -121,7 +138,12 @@ const Home = () => {
               </ul>
             </div>
             <div className={styles.platformImgContainer}>
-              <img src={multiplePlatformImg} alt="Hubly across multiple platforms" />
+              <img
+                src={multiplePlatformImg}
+                alt="Hubly across multiple platforms"
+                width={800}
+                height={600}
+              />
             </div>
           </div>
 
