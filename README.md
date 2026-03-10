@@ -14,7 +14,7 @@ A full-stack customer support platform built with React, Node.js, and MongoDB. F
 
 ## 🚀 Live Demo
 
-Visit the live application: [Hubly Demo](https://hubly-mxct-git-master-rutvija-malis-projects.vercel.app/)
+Visit the live application: [Hubly Demo](https://hubly-mxct.vercel.app/)
 
 ## 🛠️ Tech Stack
 
