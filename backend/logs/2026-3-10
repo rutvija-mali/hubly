@@ -1,0 +1,6 @@
+2026-03-10T15:52:56.790Z-MongoServerError: E11000 duplicate key error collection: hubly.widgetconfigs index: adminId_1 dup key: { adminId: ObjectId('69b03e16824d5f5780e0bc8a') }
+    at InsertOneOperation.execute (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\operations\insert.js:51:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryOperation (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\operations\execute_operation.js:207:20)
+    at async executeOperation (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\operations\execute_operation.js:75:16)
+    at async Collection.insertOne (C:\Users\rutvi\OneDrive\Desktop\cuvette-react\hubly\backend\node_modules\mongodb\lib\collection.js:157:16)

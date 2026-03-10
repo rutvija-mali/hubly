@@ -184,7 +184,7 @@ useEffect(()=>{
               <div key={customer._id} className={`${styles.userContact} ${selectedChat?._id === customer._id ? styles.activeUserChat : ''}` }>
                 <div className={`${styles.contact} ${selectedChat?._id === customer._id ? styles.activeChat : ''}`} onClick={() =>   setSelectedChat(customer)}>
                   <div className={styles.img}>
-                    <img src={profileSVG} alt="" />
+                    <img src={profileSVG} alt="Customer profile" width={32} height={32} />
                   </div>
                   <div className={styles.chatInfo}>
                     <h5>{customer.name}</h5>

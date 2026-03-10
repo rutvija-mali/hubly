@@ -175,7 +175,7 @@ const ChatBox = memo(() => {
       <div className={styles.Header} style={{backgroundColor:widgetConfig?.headerColor }}>
         <div className={styles.HeaderProfile}>
           <div className={styles.img}>
-            <img src={avatar} alt="avatar" />
+            <img src={avatar} alt="avatar" width={32} height={32} />
           </div>
           <div className={styles.active}></div>
         </div>
@@ -199,7 +199,7 @@ const ChatBox = memo(() => {
                 { customerId === null &&
                   <div className={styles.SupportMsg}>
                     <div className={styles.img}>
-                        <img src={avatar} alt="avatar" />
+                        <img src={avatar} alt="avatar" width={32} height={32} />
                     </div>
                     <div className={styles.msg}>
                         <p className={styles.message}>{widgetConfig?.customMessage1||'How can i help you?'}</p>
@@ -211,7 +211,7 @@ const ChatBox = memo(() => {
                   msg.senderType === 'admin'|| msg.senderType === 'bot' || msg.senderType === 'member'?(
                       <div className={styles.SupportMsg} key={index}>
                           <div className={styles.img}>
-                            <img src={avatar} alt="avatar" />
+                            <img src={avatar} alt="avatar" width={32} height={32} />
                           </div>
                           <div className={styles.msg}>
                             <p className={styles.message}>{msg.message}</p>
@@ -226,7 +226,7 @@ const ChatBox = memo(() => {
                 { showForm && 
                   <div className={styles.SupportMsg}>
                       <div className={styles.img}>
-                          <img src={avatar} alt="avatar" />
+                          <img src={avatar} alt="avatar" width={32} height={32} />
                       </div>
                       <div className={styles.customInputContainer}>
                          <h5 className={styles.heading}>Introduce Yourself</h5>

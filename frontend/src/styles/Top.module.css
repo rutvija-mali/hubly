@@ -37,4 +37,17 @@
 .topbarContainer .container .right .loginBtn{
    background-color: transparent;
    color:var(--blue-dark);
+} 
+
+@media screen and (max-width: 768px){
+    .topbarContainer .container{
+        width: 100%;
+        padding: 0.75rem 1rem;
+    }
+
+    .topbarContainer .container .right .btn{
+        width: auto;
+        padding: 0.4rem 0.75rem;
+        font-size: 0.9rem;
+    }
 }

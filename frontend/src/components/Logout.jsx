@@ -45,7 +45,13 @@ export default function Logout() {
     }
   return (
    <div className={styles.mainConatienre}>
-    <img src={profileSVG} alt="" onClick={()=>setIsOpen((prev)=>!prev)}/>
+    <img
+      src={profileSVG}
+      alt="User profile"
+      width={32}
+      height={32}
+      onClick={()=>setIsOpen((prev)=>!prev)}
+    />
         {isOpen && <button className={styles.logoutBtn}  onClick={handleLogout}>
           Sign out
         </button>}

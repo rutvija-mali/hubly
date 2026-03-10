@@ -8,7 +8,9 @@ const ChatBotDemo = ({headerColor,bgColor,firstMsg,secondMsg,name,email,phone}) 
     <div className={styles.demoContainer}>
       <div className={styles.demoHeader} style={{backgroundColor: headerColor}}>
          <div className={styles.demoHeaderProfile}>
-            <div  className={styles.img}><img src={avatar} alt="" /></div>
+            <div  className={styles.img}>
+              <img src={avatar} alt="Chatbot avatar" width={32} height={32} />
+            </div>
             <div className={styles.active}></div>
          </div>
          <h4>Hubly</h4>
@@ -16,7 +18,9 @@ const ChatBotDemo = ({headerColor,bgColor,firstMsg,secondMsg,name,email,phone}) 
       <div className={styles.demoBody} style={{backgroundColor: bgColor}}>
         <div className={styles.mainSection}>
            <div className={styles.initialSection}>
-              <div  className={styles.img}><img src={avatar} alt="" /></div>
+              <div  className={styles.img}>
+                <img src={avatar} alt="Chatbot avatar" width={32} height={32} />
+              </div>
               <div className={styles.msg}>
                 <p>{firstMsg}</p>
                 <p>{secondMsg}</p>

@@ -25,7 +25,7 @@ const Sidebar = () => {
     <div className={styles.sidebarMainContainer}>
       <div className={styles.sidebarContainer}>
         <div className={styles.logo}>
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" width={120} height={32} />
         </div>
         <div className={styles.linksContainer}>
           {navItems.map((item, index) => (
@@ -39,7 +39,7 @@ const Sidebar = () => {
             >
               {({ isActive }) => (
                     <div className={styles.linkContent}>
-                        <img src={item.img} alt={item.text} />
+                        <img src={item.img} alt={item.text} width={20} height={20} />
                         {isActive && <span>{item.text}</span>}
                     </div>
                 )}

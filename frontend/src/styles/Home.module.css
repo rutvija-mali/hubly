@@ -90,11 +90,12 @@
 }
 
 .mediaSection{
-    height: 20%;
+    min-height: 70px;
     background-color: #EBF1F9;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 3rem 7.5rem;
+    padding: 1.5rem 4rem;
 }
 
 .middleSection{
