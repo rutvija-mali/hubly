@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from '../styles/Home.module.css'
 import Topbar from '../components/Topbar'
-import heroSectionImg from '../assets/heroImg.svg'
+import heroSectionImg from '../assets/heroImg.png'
 import { IoArrowForward } from "react-icons/io5";
 import videoSvg from '../assets/videoSvg.svg'
 import adobeSvg from '../assets/adobeSvg.svg'
@@ -77,7 +77,7 @@ const Home = () => {
   const navigate = useNavigate();
   
   return (
-    <div className={styles.homeMainContainer}>
+    <main className={styles.homeMainContainer}>
        <Topbar/>
        <div className={styles.heroSection}>
           <div className={styles.leftHeroSection}>
@@ -157,7 +157,7 @@ const Home = () => {
             }
          </div>
         <Footer/>
-    </div>
+      </main>
   )
 }
 

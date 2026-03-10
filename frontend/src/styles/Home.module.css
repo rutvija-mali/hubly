@@ -1,12 +1,25 @@
 .heroSection{
     width: 95%;
-    height: auto;
     margin: 0 auto;
     margin-top: 3rem;
     display: flex;
     justify-content:center;
     align-items:center;
     position: relative;
+    gap: 2rem;
+}
+
+.imgContainer{
+    flex: 1;
+    max-width: 520px;
+    display: flex;
+    justify-content: center;
+}
+
+.imgContainer img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 .leftHeroSection{
     font-family: 'Barlow' 'sans-serif';
