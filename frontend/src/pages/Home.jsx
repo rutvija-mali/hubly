@@ -9,7 +9,7 @@ import elasticSvg from '../assets/elasticSvg.svg'
 import opendoorSvg from '../assets/opendoorSvg.svg'
 import airtableSvg from '../assets/airTableSvg.svg'
 import framerSvg from '../assets/FramerSvg.svg'
-import multiplePlatformImg from '../assets/multiplePlatformImg.svg'
+import multiplePlatformImg from '../assets/multiplePlatformImg.png'
 import { Card } from '../components/Card';
 import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
@@ -111,17 +111,18 @@ const Home = () => {
           </div>
           <div className={styles.bottomSection}>
             <div className={styles.leftSection}>
-                <ul>
-                  {platformFeatures.map((item,index)=>(
-                    <li key={index}>
-                      <h3>{item.heading}</h3>
-                      <p>{item.point}</p>
-                    </li>
-                  ))}
-                </ul>
-
+              <ul>
+                {platformFeatures.map((item,index)=>(
+                  <li key={index}>
+                    <h3>{item.heading}</h3>
+                    <p>{item.point}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <img src={multiplePlatformImg} alt="" />
+            <div className={styles.platformImgContainer}>
+              <img src={multiplePlatformImg} alt="Hubly across multiple platforms" />
+            </div>
           </div>
 
         </div>

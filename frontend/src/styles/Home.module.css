@@ -139,6 +139,19 @@
     background-color: var(--white);
 }
 
+.platformImgContainer{
+    flex: 1;
+    max-width: 520px;
+    display: flex;
+    justify-content: center;
+}
+
+.platformImgContainer img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 .leftSection ul{
     list-style: none;
     font-family: 'Barlow' 'sans-serif';
